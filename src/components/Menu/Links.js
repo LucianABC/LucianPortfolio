@@ -7,7 +7,8 @@ import './Menu.scss';
 import '../Animations/Animations.scss';
 import HomeIcon from '../../assets/houseicon.png';
 
-const Links=({sections})=> {
+const Links=({sections, show})=> {
+    if(!show) return null;
     return(
         <div className="browser-menu">
             <Link className="menu-item wobble-hor-bottom" to= {sections[0].route}>

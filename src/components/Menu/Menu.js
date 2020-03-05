@@ -32,11 +32,11 @@ const Menu = () => {
             route: "/contact"
         }
     ];
-    
+    const {pathname} = window.location;
     return (
         <div className="browser">
             <BrowserRouter>
-                <Links sections={Sections}/>
+                <Links sections={Sections} show={pathname==="/" ? false : true}/>
                 <Switch>
                     <Route exact path= {Sections[0].route} 
                                     component={Sections[0].section}></Route>)

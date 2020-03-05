@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Contact.scss';
 import '../Section.scss';
 import '../../components/Animations/Animations.scss';
@@ -9,9 +9,25 @@ import Icon from './Icons/Icon';
 import useBool from '../../components/useBool';
 
 const Contact = ()=>{
-  
-    const handleClick = (screen)=>{
-        return
+    const [info, setInfo] = useState("Welcome!");
+
+    const handleClick = (showinfo)=>{
+        switch (showinfo){
+            case "cellphone":
+                console.log("celular")
+                setInfo("+541122529807");
+                break;
+
+            case "email":
+                console.log("mail")
+                setInfo("louabecasis@gmail.com");
+                break;
+            
+            case "linkedin":
+                console.log("celular")
+                setInfo("Luciana Abecasis");
+                break;
+        }
     }
     return(
         <section className="contact section">
@@ -23,12 +39,14 @@ const Contact = ()=>{
                         <h1>16:20</h1>
                     </div>
                     <div className="cellphone-content scale-in-bottom">
-                       <p > Welcome! </p>
+                       <p> {info} </p>
                     </div>
                     <div className="cellphone-buttons">
-                        <Icon onClick={handleClick("cellphone")} img={CellphoneIco}>Cellphone</Icon>
-                        <Icon onClick={handleClick("email")} img={GmailIco}>Email</Icon>
-                        <Icon onClick={handleClick("linkedin")} img={LinkedinIco}>Linked In</Icon>
+                        <Icon onClick={e=> {handleClick("cellphone")}} img={CellphoneIco}>Cellphone</Icon>
+                        <Icon onClick={e=> {
+                            console.log("hola?");
+                            handleClick("email");}} img={GmailIco}>Email</Icon>
+                        <Icon onClick={e=>{ handleClick("linkedin")}} img={LinkedinIco}>Linked In</Icon>
                     </div>
                 </div>
             </div>
