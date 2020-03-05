@@ -3,6 +3,7 @@ import {BrowserRouter,
         Switch,
         Route} from 'react-router-dom';
 import './Menu.scss';
+import Home from '../../sections/Home/Home';
 import Contact from '../../sections/Contact/Contact';
 import AboutMe from '../../sections/AboutMe/AboutMe';
 import Projects from '../../sections/Projects/Projects';
@@ -12,7 +13,7 @@ import Links from './Links';
 const Menu = () => {
     const Sections=[
         {
-            section: null,
+            section: Home,
             name: "Home",
             route: "/"
         },

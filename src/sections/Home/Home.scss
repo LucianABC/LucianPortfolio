@@ -1,0 +1,47 @@
+.home{
+    height: 590px;
+    
+    position: relative;
+    .home-content {
+        .projects-postits {
+            background-image: url('../../assets/PostIts/stackofpostis.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 320px;
+            position: absolute;
+            top: 15px;
+            width: 340px;
+        }
+
+        .contact-cellphone {
+            background-image: url('../../assets/cellphone-home.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 27px;
+            box-shadow: 0px 0px 10px 1px #00000066;
+            height: 450px;
+            top: 160px;
+            right: 0px;
+            position: absolute;
+            transform: rotate(-27deg);
+            width: 256px;
+        }
+        .aboutme-diary {
+            background-image: url('../../assets/diary.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-top-right-radius: 19px;
+            border-bottom-right-radius: 19px;
+            box-shadow: 14px 2px 10px 1px #00000066;
+            height: 537px;
+            left: -50px;
+            top: 39px;
+            position: absolute;
+            transform: rotate(17deg);
+            width: 450px;
+        }
+    }
+}
