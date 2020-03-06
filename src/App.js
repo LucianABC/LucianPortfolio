@@ -1,16 +1,26 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Menu from './components/Menu/Menu';
-import Projects from './sections/Projects/Projects';
-import Contact from './sections/Contact/Contact';
-import AboutMe from './sections/AboutMe/AboutMe'
+import MenuContext from './MenuContext';
 import './App.css';
 
 function App() {
+  const [pathname, setPathname] = useState()
+  const showMenu =()=> {              
+    const {pathname} = window.location;
+    setPathname(pathname);
+  }
   return (
+  <MenuContext.Provider value={
+    { 
+      pathname,
+      showMenu 
+    }
+  }>
     <div className="App">
       <Menu></Menu>
       
     </div>
+  </MenuContext.Provider>
   );
 }
 

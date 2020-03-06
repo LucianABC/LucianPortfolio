@@ -1,16 +1,19 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect, useContext} from 'react';
 import './Contact.scss';
 import '../Section.scss';
 import '../../components/Animations/Animations.scss';
 import CellphoneIco from '../../assets/Icons/phone-call.png';
 import GmailIco from '../../assets/Icons/gmail.png';
 import LinkedinIco from '../../assets/Icons/linkedin.png';
+import MenuContext from '../../MenuContext';
 import Icon from './Icons/Icon';
 import useBool from '../../components/useBool';
 
 const Contact = ()=>{
-    const [info, setInfo] = useState("Welcome!");
+    const {showMenu} = useContext(MenuContext);
+    useEffect(showMenu, []);
 
+    const [info, setInfo] = useState("Welcome!");
     const handleClick = (showinfo)=>{
         switch (showinfo){
             case "cellphone":

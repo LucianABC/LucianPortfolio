@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useEffect, useContext} from 'react';
 import '../Section.scss';
 import './Projects.scss';
+import MenuContext from '../../MenuContext';
 import PostIt from '../../components/PostIt/PostIt';
 import PostIt1 from '../../assets/PostIts/postit1.png';
 import PostIt2 from '../../assets/PostIts/postit2.png';
@@ -10,6 +11,8 @@ import PostIt5 from '../../assets/PostIts/postit5.png';
 import PostIt6 from '../../assets/PostIts/postit6.png';
 
 const Projects =()=>{
+    const {showMenu} = useContext(MenuContext);
+    useEffect(showMenu, []);
     return(
         <div className="projects section">
             <section className="projects-container">

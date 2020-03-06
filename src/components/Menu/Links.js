@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {BrowserRouter,
         Link,
         Switch,
@@ -8,6 +8,7 @@ import '../Animations/Animations.scss';
 import HomeIcon from '../../assets/houseicon.png';
 
 const Links=({sections, show})=> {
+   
     if(!show) return null;
     return(
         <div className="browser-menu">

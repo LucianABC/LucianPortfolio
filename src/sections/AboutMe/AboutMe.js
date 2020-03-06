@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useEffect, useContext} from 'react';
 import '../Section.scss';
 import './AboutMe.scss';
+import MenuContext from '../../MenuContext';
 import Title from './Title/Title';
 import Sticker from './Sticker/Sticker';
 import PhotoFrame from '../../components/PhotoFrame/PhotoFrame';
@@ -15,6 +16,9 @@ import Matrix from '../../assets/Stickers/matrix.png';
 import Orange from '../../assets/Stickers/orange.png';
 
 const AboutMe = () => {
+    const {showMenu} = useContext(MenuContext);
+    useEffect(showMenu, []);
+
     const Stickers = [
         { img: Mike,
         top: "341px",
