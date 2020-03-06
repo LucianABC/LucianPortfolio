@@ -11,11 +11,15 @@ const Home = () => {
     return(
         <section className="home section">
             <section className="home-content">
-                <Link to="/about-me">
+                <Link to="/my-projects">
                       <div className="projects-postits"></div>
                 </Link>
-                <div className="contact-cellphone"> </div>
-                <div className="aboutme-diary"></div>
+                <Link to="/contact">
+                    <div className="contact-cellphone"> </div>
+                </Link>
+                <Link to="/about-me">
+                    <div className="aboutme-diary"></div>
+                </Link>
             </section>
         </section>
     );
